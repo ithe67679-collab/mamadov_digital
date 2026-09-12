@@ -10,7 +10,7 @@ from telegram.ext import (
 
 # ==== SOZLAMALAR ====
 # Railway'da "Variables" bo'limiga BOT_TOKEN nomli o'zgaruvchi qo'shing.
-BOT_TOKEN = os.environ.get("8965830878:AAFbtlCc2iGc0duXQklhnlZw0eI1Q7kKs40")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "BU_YERGA_TOKENINGIZNI_QOYING")
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -23,25 +23,25 @@ SERVICES = {
     "tgbot": {
         "title": "🤖 Telegram bot",
         "items": [
-            ("Oddiy bot (menyu, javob berish)", "300 000 so'm"),
-            ("O'rtacha bot (baza bilan, buyurtma qabul qilish)", "700 000 so'm"),
-            ("Murakkab bot (to'lov, admin panel, integratsiya)", "1 500 000 so'm dan"),
+            ("Oddiy bot (menyu, javob berish)", "500 000 so'm"),
+            ("O'rtacha bot (baza bilan, buyurtma qabul qilish)", "1 200 000 so'm"),
+            ("Murakkab bot (to'lov, admin panel, integratsiya)", "2 500 000 so'm dan"),
         ],
     },
     "logo": {
         "title": "🎨 Logotip",
         "items": [
-            ("Basic (1 variant, PNG)", "80 000 so'm"),
-            ("Standard (3 variant, PNG+SVG)", "150 000 so'm"),
-            ("Premium (5+ variant, barcha format, brendbook)", "300 000 so'm"),
+            ("Basic (1 variant, PNG)", "150 000 so'm"),
+            ("Standard (3 variant, PNG+SVG)", "300 000 so'm"),
+            ("Premium (5+ variant, barcha format, brendbook)", "600 000 so'm"),
         ],
     },
     "web": {
         "title": "🌐 Veb-sayt",
         "items": [
-            ("Landing page (1 sahifa)", "800 000 so'm"),
-            ("Vizitka sayt (3-5 sahifa)", "1 500 000 so'm"),
-            ("Katalog / biznes sayt (admin panel bilan)", "3 000 000 so'm dan"),
+            ("Landing page (1 sahifa)", "1 500 000 so'm"),
+            ("Vizitka sayt (3-5 sahifa)", "3 000 000 so'm"),
+            ("Katalog / biznes sayt (admin panel bilan)", "6 000 000 so'm dan"),
         ],
     },
 }
@@ -102,12 +102,14 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif data == "contact":
         text = (
-            "📞 Bog'lanish:\n\n"
+            "📞 *Bog'lanish:*\n\n"
             "Telegram: @mamadov_13\n"
             "Tel: +998 90 695 60 60\n"
             "Instagram: @devx.uz"
         )
-        await query.edit_message_text(text, reply_markup=main_menu_keyboard())
+        await query.edit_message_text(
+            text, reply_markup=main_menu_keyboard(), parse_mode="Markdown"
+        )
 
 
 def main():
