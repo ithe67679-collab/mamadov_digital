@@ -10,7 +10,7 @@ from telegram.ext import (
 
 # ==== SOZLAMALAR ====
 # Railway'da "Variables" bo'limiga BOT_TOKEN nomli o'zgaruvchi qo'shing.
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "BU_YERGA_TOKENINGIZNI_QOYING")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8965830878:AAFbtlCc2iGc0duXQklhnlZw0eI1Q7kKs40")
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
