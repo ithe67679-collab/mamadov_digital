@@ -92,7 +92,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
             text, reply_markup=service_keyboard(), parse_mode="Markdown"
         )
 
-    elif data == "order":
+    "bog'lanish: @mamadov_13"
+
         text = (
             "✅ So'rovingiz qabul qilindi!\n\n"
             "Menejerimiz siz bilan tez orada bog'lanadi.\n"
