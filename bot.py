@@ -10,7 +10,7 @@ from telegram.ext import (
 
 # ==== SOZLAMALAR ====
 # Railway'da "Variables" bo'limiga BOT_TOKEN nomli o'zgaruvchi qo'shing.
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8965830878:AAFbtlCc2iGc0duXQklhnlZw0eI1Q7kKs40")
+BOT_TOKEN = os.environ.get("8965830878:AAFbtlCc2iGc0duXQklhnlZw0eI1Q7kKs40")
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -102,14 +102,12 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     elif data == "contact":
         text = (
-            "📞 *Bog'lanish:*\n\n"
+            "📞 Bog'lanish:\n\n"
             "Telegram: @mamadov_13\n"
             "Tel: +998 90 695 60 60\n"
             "Instagram: @devx.uz"
         )
-        await query.edit_message_text(
-            text, reply_markup=main_menu_keyboard(), parse_mode="Markdown"
-        )
+        await query.edit_message_text(text, reply_markup=main_menu_keyboard())
 
 
 def main():
